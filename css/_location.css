@@ -1,0 +1,110 @@
+.location{
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 85px;
+}
+
+.location #map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.contact-block{
+    padding: 30px 35px 10px 30px;
+    background: #ffffff;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-text{
+    margin-bottom: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    position: relative;
+    line-height: 1.4;
+}
+
+.button-phone{
+    padding: 12px 21px;
+    width: 62%;
+}
+
+.container-not-flex{
+    display: block;
+}
+
+.space{
+    padding: 4px;
+    display: block;
+}
+
+.place::before{
+    content: url(../img/icons/place.png);
+}
+
+.phone::before{
+    content: url(../img/icons/phone.png);
+}
+
+.email::before{
+    content: url(../img/icons/email.png);
+}
+
+.contact-block .contact-text::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+@media screen and (max-width: 600px){
+    .contact-text{
+        padding-left: 0;
+    }
+    .contact-block{
+        width: 100%;
+        padding: 30px 3% 10px 3%;
+        background: #ffffff;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    .location #map{
+        position: unset;
+    }
+
+    .place::before {
+        content: '' !important;
+    }
+    .phone::before{
+        content: '' !important;
+    } 
+    .email::before{
+        content: '' !important;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .button-phone{
+        padding-left: 58px;
+    }
+    .location{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .button-phone{
+        padding-left: 45px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .button-phone{
+        padding-left: 23px;
+    }
+}

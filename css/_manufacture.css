@@ -1,0 +1,229 @@
+#manufacture{
+    padding: 100px 0 40px 0;
+}
+
+.manufacture-block{
+    width: 377px;
+}
+
+.manufacture-block__title{
+    font-size: 28px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 35px;
+    margin-top: 39px;
+}
+
+.manufacture-block__title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 404px;
+    height: 62px;
+    background-color: #ff9d00;
+    z-index: -1;
+    top: -20px;
+    left: -30px;
+}
+
+.manufacture-block__text{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #373737;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.manufacture-slider{
+    position: relative;
+    z-index: 2;
+}
+
+.slider-top-img{
+    width: 100%;
+}
+
+.manufacture-slider-top{
+    overflow: unset;
+}
+
+.manufacture-slider-top .slick-slide{
+    outline: none;
+}
+
+.manufacture-slider-bottom{
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 62px;
+    overflow-y: hidden;
+}
+
+.manufacture-slider-item{
+    position: relative;
+    margin: 0 3px;
+    outline: none;
+    height: 62px;
+}
+
+.slick-slide-img{
+    width: 100%;
+}
+
+.slick-list{
+    margin-bottom: 13px;
+}
+
+/* затемнение нижнего слайдера */
+.manufacture-slider-item
+.manufacture-slider-item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.795);
+}
+
+/* сброс затемнения нижнего слайдера */
+.manufacture-slider-bottom
+.slick-current::after{
+    background-color: rgba(0, 0, 0, 0)
+}
+
+/* кастомные стрелки */
+.slider-arrow{
+    position: absolute;
+    width: 22px;
+    height: 100%;
+    top: 0;
+    z-index: 3;
+    border: 1px solid var(--button-bgcolor);
+}
+
+.slider-arrow_left{
+    transition: 0.1s;
+    left: 0;
+    background: url(../img/manufacture/arrow_left.png) center no-repeat;
+}
+
+.slider-arrow_left:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    background: var(--button-bgcolor) url(../img/manufacture/arrow_right_active.png) center no-repeat;
+    transform: rotate(180deg);
+}
+
+.slider-arrow_right{
+    transition: 0.1s;
+    right: 0;
+    background: url(../img/manufacture/arrow_right.png) center no-repeat;
+}
+
+.slider-arrow_right:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    background: var(--button-bgcolor) url(../img/manufacture/arrow_right_active.png) center no-repeat;
+}
+
+@media (max-width: 768px){
+    #manufacture{
+        padding: 48px;
+        padding-bottom: 122px;
+    }
+    .manufacture-block__title{
+        margin-top: 0;
+    }
+    .manufacture-block__title::after{
+        width: 768px;
+        left: -63px;
+    }
+    .manufacture-block{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .manufacture-slider-bottom{
+        display: none;
+    }
+    .slider-arrow{
+        height: 80px;
+        top: 50%;
+        margin-top: -40px;
+        background: var(--button-bgcolor);
+    }
+    .slider-arrow_left{
+        background: var(--button-bgcolor) url(../img/manufacture/arrow_right_active.png) center no-repeat;
+        transform: rotate(180deg);
+    }
+    .slider-arrow_right{
+        background: var(--button-bgcolor) url(../img/manufacture/arrow_right_active.png) center no-repeat;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #manufacture{
+        padding: 30px 16px;
+    }
+    .manufacture-block__title{
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+    .manufacture-block__title::after{
+        width: 425px;
+        left: -31px;
+    }
+    .manufacture-block__text{
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 300;
+        margin-bottom: 8px;
+    }
+    .manufacture-block__title{
+        margin-bottom: 29px;
+    }
+    .manufacture-block{
+        margin-bottom: 12px;
+    }
+
+    .manufacture-slider-top{
+        height: 380px;
+    }
+
+    .manufacture-slider-top img{
+        height: 380px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #manufacture{
+        padding: 30px 4px;
+    }
+    .manufacture-block__title::after{
+        width: 375px;
+        left: -19px;
+    }
+    .manufacture-block{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .manufacture-block__title::after{
+        width: 320px;
+        height: 53px;
+        top: 50%;
+        margin-top: -24px
+    }
+    .manufacture-block__text{
+        font-size: 14px;
+    }
+    .manufacture-block__title{
+        font-size: 20px;
+    }
+}

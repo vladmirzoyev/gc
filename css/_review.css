@@ -1,0 +1,118 @@
+#review{
+    background: #f4f4f4;
+    padding: 60px 0;
+}
+
+.review-title{
+    color: #313131;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.review-title::after{
+    content: '';
+    background: url(../img/production/wavy_line.png) center no-repeat;
+    display: block;
+    height: 6px;
+    margin-top: 15px;
+}
+
+.review-slider{
+    margin-top: 30px;
+}
+
+/* Слайдер с отзывами */
+
+
+.slider-review-arrow{
+    position: absolute;
+    width: 22px;
+    height: 100%;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.slider-review_left{
+    transition: 0.2s;
+    left: -15px;
+    background: url(../img/review/arrow_lt.png) center no-repeat;
+    border: none;
+}
+
+.slider-review_right{
+    transition: 0.2s;
+    right: -15px;
+    background: url(../img/review/arrow_rt.png) center no-repeat;
+    border: none;
+}
+
+.slick-slide img{
+    margin: 0 auto;
+}
+.review-slider-item{
+    outline: none;
+}
+
+/* медиа запросы */
+@media screen and (max-width: 1024px){
+    .review-slider{
+        padding: 0 54px;
+    }
+}
+@media screen and (max-width: 768px){
+    .fix-right-arrow{
+        left: 65px;
+    }
+    .fix-left-arrow{
+        right: 65px;
+    }
+    .slick-slide img{
+        height: 360px;
+    }
+}
+@media screen and (max-width: 425px){
+    .fix-right-arrow{
+        left: 58px;
+    }
+    .fix-left-arrow{
+        right: 58px;
+    }
+    .review-title{
+        font-size: 20px;
+    }
+    .review-title::after{
+        content: '';
+    }
+}
+
+@media screen and (max-width: 375px){
+    .review-slider{
+        padding: 0 46px;
+    }
+    .fix-right-arrow{
+        left: 38px;
+    }
+    .fix-left-arrow{
+        right: 38px;
+    }
+    .slick-slide img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .review-slider{
+        padding: 0 46px;
+    }
+    .fix-right-arrow{
+        left: 26px;
+    }
+    .fix-left-arrow{
+        right: 26px;
+    }
+}
